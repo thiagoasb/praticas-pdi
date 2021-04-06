@@ -223,8 +223,39 @@ Na saída podemos verificar a imagem capturada e a filtrada:
 Output:
 <p align="center">
   <img alt="imagemcapturada" src="./exercicio 5.2/output_org.png" width=200px height=200px>
-    <img alt="imagemfiltrada" src="./exercicio 5.2/output_filtro.png" width=200px height=200px>
+  <img alt="imagemfiltrada" src="./exercicio 5.2/output_filtro.png" width=200px height=200px>
 </p>
 
 ## Exercício 8.2
+- **Utilizando os programas [exemplos/canny.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/canny.cpp) e [exemplos/pontilhismo.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/pontilhismo.cpp) como referência, implemente um programa cannypoints.cpp. A idéia é usar as bordas produzidas pelo algoritmo de Canny para melhorar a qualidade da imagem pontilhista gerada. A forma como a informação de borda será usada é livre. Entretanto, são apresentadas algumas sugestões de técnicas que poderiam ser utilizadas:**
+**Desenhar pontos grandes na imagem pontilhista básica;**
+
+    - **Usar a posição dos pixels de borda encontrados pelo algoritmo de Canny para desenhar pontos nos respectivos locais na imagem gerada.**
+
+    - **Experimente ir aumentando os limiares do algoritmo de Canny e, para cada novo par de limiares, desenhar círculos cada vez menores nas posições encontradas. A Figura 19 foi desenvolvida usando essa técnica.**
+
+    - **Escolha uma imagem de seu gosto e aplique a técnica que você desenvolveu.**
+
+    - **Descreva no seu relatório detalhes do procedimento usado para criar sua técnica pontilhista.**
+
+
+## Exercício 9.2
+- Utilizando o programa kmeans.cpp como exemplo prepare um programa exemplo onde a execução do código se dê usando o parâmetro nRodadas=1 e inciar os centros de forma aleatória usando o parâmetro KMEANS_RANDOM_CENTERS ao invés de KMEANS_PP_CENTERS. Realize 10 rodadas diferentes do algoritmo e compare as imagens produzidas. Explique porque elas podem diferir tanto.
+
+Para fazer a comparação entre as imagens foi alterado no programa a variável *nRodadas* para 1 e o parâmetro *KMEANS_RANDOM_CENTERS* para *KMEANS_PP_CENTERS*, para iniciar os centros de forma aleatória, em seguido o algorítmo foi rodado 10 vezes.
+
+Output:
+<p align="center">
+   <img alt="imagemcapturada" src="./exercicio 9.2/sushi.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-1.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-2.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-3.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-4.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-5.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-6.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-7.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-8.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-9.jpg" width=200px height=200px>
+  <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-10.jpg" width=200px height=200px>
+</p>
 
