@@ -206,3 +206,25 @@ Output
 </p>
 
 ## Exercício 5.2
+- Utilizando o programa [exemplos/filtroespacial.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/filtroespacial.cpp) como referência, implemente um programa laplgauss.cpp. O programa deverá acrescentar mais uma funcionalidade ao exemplo fornecido, permitindo que seja calculado o laplaciano do gaussiano das imagens capturadas. Compare o resultado desse filtro com a simples aplicação do filtro laplaciano.
+
+Primeiramente foi escolhida uma máscara utilizada no algorítmo do laplaciano do gaussiano. Foi acrescentado uma opção no switch que representa o algorítmo solicitado:
+```cpp
+float laplgauss[] = { 0, -1, -2, -1, 0, -1, 0, 2, 0, -1, -2, 2, 8, 2, -2, -1, 0, 2, 0, -1, 0, -1, -2, -1, 0 };
+```
+
+```cpp
+    case 'f':
+            mask = cv::Mat(5, 5, CV_32F, laplgauss);
+            printmask(mask);
+            break;
+```
+Na saída podemos verificar a imagem capturada e a filtrada:
+Output:
+<p align="center">
+  <img alt="imagemcapturada" src="./exercicio 5.2/output_org.png" width=200px height=200px>
+    <img alt="imagemfiltrada" src="./exercicio 5.2/output_filtro.png" width=200px height=200px>
+</p>
+
+## Exercício 8.2
+
