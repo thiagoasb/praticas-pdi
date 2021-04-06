@@ -1,14 +1,14 @@
 # Exercícios Práticos PDI
 
-- [About](#-about)
-- [Section 2.2](#-section-2.2)
-- [Section 3.2](#-section-2.2)
-- [Section 4.2](#-section-4.2)
-- [Section 5.2](#-section-5.2)
-- [Section 8.2](#-section-8.2)
-- [Section 9.2](#-section-9.2)
+- [Sobre](#-sobre)
+- [Exercício 2.2](#-exercício-2.2)
+- [Exercício 3.2](#-exercício-2.2)
+- [Exercício 4.2](#-exercício-4.2)
+- [Exercício 5.2](#-exercício-5.2)
+- [Exercício 8.2](#-exercício-8.2)
+- [Exercício 9.2](#-exercício-9.2)
 
-## About
-Práticas realizadas durante a disciplina de Processamento Digital de Imagens, ministrada pelo professor Agostinho Brito. As práticas seguintes estão presentes no seguinte [link](https://agostinhobritojr.github.io/tutorial/pdi/#_pref%C3%A1cio).
+## Sobre
+Práticas realizadas durante a disciplina de Processamento Digital de Imagens, ministrada pelo professor Agostinho Brito. As práticas realizadas a seguir foram feitas pelo professor e podem ser consultadas no tutorial [Processamento Digital de Imagens com OpenCV](https://agostinhobritojr.github.io/tutorial/pdi/#_pref%C3%A1cio).
 
-## Section 2.2
+## Exercício 2.2
