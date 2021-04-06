@@ -104,7 +104,7 @@ Uma possível solução para o problema de procurar mais de 255 objetos na cena 
 
 - **Aprimore o algoritmo de contagem apresentado para identificar regiões com ou sem buracos internos que existam na cena. Assuma que objetos com mais de um buraco podem existir. Inclua suporte no seu algoritmo para não contar bolhas que tocam as bordas da imagem. Não se pode presumir, a priori, que elas tenham buracos ou não.**
 
-Primeiramente foi retirado todos as bolhas das bordas da imagem (pois não se sabe se possui buracos ou não), em seguida foi alterada a cor do background para garantir que estivesse com uma cor diferentes do objeto. Um objeto com buracos é contabilizado quando é encontrado um pixel com a cor preta e este objeto é totalmente preenchido com a mesma cor. Caso contrário é encontrado um objeto sem buracos.
+Primeiramente foi retirado todos as bolhas das bordas da imagem (pois não se sabe se possui buracos ou não), em seguida foi alterada a cor do background para garantir que estivesse com uma cor diferentes do objeto. Um objeto com buracos é contabilizado quando é encontrado um pixel com a cor preta e este objeto é totalmente preenchido com a mesma cor. Caso contrário é encontrado um objeto sem buracos. Foi utilizada a função *floodFill* para realizar o preenchimento das regiões.
 
 ```cpp
     int comBuracos = 0;
@@ -165,3 +165,44 @@ Output:
   <img alt="outputrealce" src="./exercicio 3.2/output_realce.png">
 </p>
 
+## Exercício 4.2
+- **Utilizando o programa [exemplos/histogram.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/histogram.cpp) como referência, implemente um programa equalize.cpp. Este deverá, para cada imagem capturada, realizar a equalização do histogram antes de exibir a imagem. Teste sua implementação apontando a câmera para ambientes com iluminações variadas e observando o efeito gerado. Assuma que as imagens processadas serão em tons de cinza.**
+
+As adaptações feitas foram a utilização da função *flip* para inverter a imagem, adaptação da cor para escala de cinza, a separação dos planos com o split, a equalização do Histograma (*equalizeHis*) e foi feita união dos planos.
+
+```cpp
+        flip(image, image, 1);
+
+        cvtColor(image, image_Equa, cv::COLOR_BGRA2GRAY);
+        split(image_Equa, planesEqua);
+        equalizeHist(planesEqua[0], planesEqua[0]);
+        merge(planesEqua, image_Equa);
+```
+
+<p align="center">
+  <img alt="saida3" src="./exercicio 4.2/output1.png" width=200px height=200px>
+  <img alt="outputrealce" src="./exercicio 4.2/output_equalizado.png" width=200px height=200px>
+</p>
+
+- **Utilizando o programa [exemplos/histogram.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/histogram.cpp) como referência, implemente um programa motiondetector.cpp. Este deverá continuamente calcular o histograma da imagem (apenas uma componente de cor é suficiente) e compará-lo com o último histograma calculado. Quando a diferença entre estes ultrapassar um limiar pré-estabelecido, ative um alarme. Utilize uma função de comparação que julgar conveniente.**
+
+Para a detecção de movimento foi utilizado uma variável correlação (que armazena o valor da comparação dos histogramas, feito pela função *compareHist*), caso o valor da correlacao seja menor que a tolerância, o alarme é ativado.
+
+```cpp
+        correlacao = compareHist(histR, histograma, cv::HISTCMP_CORREL);
+
+        histograma = histR.clone();
+
+        if (correlacao < tolerancia)
+        {
+            cv::putText(image, "Alarme ativado!", cv::Point(10, 55),
+                cv::FONT_HERSHEY_COMPLEX_SMALL, 1.2, cv::Scalar(0, 0, 255), 1, cv::LINE_AA);
+        }
+
+```
+Output
+<p align="center">
+  <img alt="movimentoimagem" src="./exercicio 4.2/movimento_detectado.png" width=200px height=200px>
+</p>
+
+## Exercício 5.2
