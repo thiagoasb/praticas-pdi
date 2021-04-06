@@ -104,7 +104,7 @@ Uma possível solução para o problema de procurar mais de 255 objetos na cena 
 
 - **Aprimore o algoritmo de contagem apresentado para identificar regiões com ou sem buracos internos que existam na cena. Assuma que objetos com mais de um buraco podem existir. Inclua suporte no seu algoritmo para não contar bolhas que tocam as bordas da imagem. Não se pode presumir, a priori, que elas tenham buracos ou não.**
 
-Primeiramente foi retirado todos as bolhas das bordas da imagem (pois não se sabe se possui buracos ou não), em seguida foi alterada a cor do background para garantir que estivesse com uma cor diferentes do objeto. Um objeto com buracos é contabilizado quando é encontrado um pixel com a cor preta e este objeto é totalmente preenchido com a mesma cor.
+Primeiramente foi retirado todos as bolhas das bordas da imagem (pois não se sabe se possui buracos ou não), em seguida foi alterada a cor do background para garantir que estivesse com uma cor diferentes do objeto. Um objeto com buracos é contabilizado quando é encontrado um pixel com a cor preta e este objeto é totalmente preenchido com a mesma cor. Caso contrário é encontrado um objeto sem buracos.
 
 ```cpp
     int comBuracos = 0;
