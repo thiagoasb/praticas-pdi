@@ -10,8 +10,8 @@ int main(int, char**) {
     cv::Vec3b val;
 
     int x1 = 0;
+	int x2 = 0;
     int y1 = 0;
-    int x2 = 0;
     int y2 = 0;
 
     image = cv::imread("Resources/biel.png", cv::IMREAD_GRAYSCALE);
@@ -20,6 +20,7 @@ int main(int, char**) {
 
     cv::namedWindow("negativo", cv::WINDOW_AUTOSIZE);
 
+    //Exercícío 2.2 - 1
     cout << "Digite as coordenadas de P1 (x,y):" << endl;
     cout << "x1: ";
     cin >> x1;
@@ -39,10 +40,10 @@ int main(int, char**) {
             image.at<uchar>(i, j) = 255 - image.at<uchar>(i, j);
         }
     }
-    
+
     cv::imshow("negativo", image);
 
-    //Exercício 2.2 - 1
+    //Exercício 2.2 - 2
     Mat image_org = cv::imread("Resources/biel.png", cv::IMREAD_GRAYSCALE);
     Mat image2 = image_org.clone();
 

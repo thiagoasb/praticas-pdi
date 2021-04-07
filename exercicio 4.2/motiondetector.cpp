@@ -56,11 +56,6 @@ int main(int argc, char** argv) {
 
         histograma = histR.clone();
 
-        std::string resultado = "correlação: " + std::to_string(correlacao);
-        
-        cv::putText(image, resultado, cv::Point(10, 30),
-            cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cv::Scalar(0, 255, 239), 1, cv::LINE_AA);
-
         if (correlacao < tolerancia)
         {
             cv::putText(image, "Alarme ativado!", cv::Point(10, 55),
