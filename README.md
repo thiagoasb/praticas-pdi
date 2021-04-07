@@ -19,6 +19,7 @@ Componentes:
 - **Utilizando o programa [exemplos/pixels.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/pixels.cpp) como referência, implemente um programa regions.cpp. Esse programa deverá solicitar ao usuário as coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem e exibir que lhe for fornecida. Entretanto, a região definida pelo retângulo de vértices opostos definidos pelos pontos P1 e P2 será exibida com o negativo da imagem na região correspondente.**
 
 Foi criada as variáveis x1, x2, y1, y2 que seram recebidas pelo usuário e representam os pontos dos vértices que delimitará a região onde será representado o negativo da imagem (efeito gerado pela expressão *255 - image.at<uchar>(i, j)*):
+
 ```cpp
 cv::Mat image;
     cv::Vec3b val;
@@ -97,6 +98,8 @@ Output:
   <img alt="biel_trocado" src="./exercicio 2.2/output2.png">
 </p>
 
+O código da total da questão pode ser verificado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%202.2/regions.cpp)
+
 ## Exercício 3.2
 - **Observando-se o programa [labeling.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/labeling.cpp) como exemplo, é possível verificar que caso existam mais de 255 objetos na cena, o processo de rotulação poderá ficar comprometido. Identifique a situação em que isso ocorre e proponha uma solução para este problema.**
 
@@ -165,6 +168,8 @@ Output:
   <img alt="outputrealce" src="./exercicio 3.2/output_realce.png">
 </p>
 
+O código total da questão pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%203.2/exercicio32.cpp)
+
 ## Exercício 4.2
 - **Utilizando o programa [exemplos/histogram.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/histogram.cpp) como referência, implemente um programa equalize.cpp. Este deverá, para cada imagem capturada, realizar a equalização do histogram antes de exibir a imagem. Teste sua implementação apontando a câmera para ambientes com iluminações variadas e observando o efeito gerado. Assuma que as imagens processadas serão em tons de cinza.**
 
@@ -183,6 +188,8 @@ As adaptações feitas foram a utilização da função *flip* para inverter a i
   <img alt="saida3" src="./exercicio 4.2/output1.png" width=200px height=200px>
   <img alt="outputrealce" src="./exercicio 4.2/output_equalizado.png" width=200px height=200px>
 </p>
+
+O código total pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%204.2/equalize.cpp)
 
 - **Utilizando o programa [exemplos/histogram.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/histogram.cpp) como referência, implemente um programa motiondetector.cpp. Este deverá continuamente calcular o histograma da imagem (apenas uma componente de cor é suficiente) e compará-lo com o último histograma calculado. Quando a diferença entre estes ultrapassar um limiar pré-estabelecido, ative um alarme. Utilize uma função de comparação que julgar conveniente.**
 
@@ -205,6 +212,8 @@ Output
   <img alt="movimentoimagem" src="./exercicio 4.2/movimento_detectado.png" width=200px height=200px>
 </p>
 
+O código total pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%204.2/motiondetector.cpp).
+
 ## Exercício 5.2
 - Utilizando o programa [exemplos/filtroespacial.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/filtroespacial.cpp) como referência, implemente um programa laplgauss.cpp. O programa deverá acrescentar mais uma funcionalidade ao exemplo fornecido, permitindo que seja calculado o laplaciano do gaussiano das imagens capturadas. Compare o resultado desse filtro com a simples aplicação do filtro laplaciano.
 
@@ -226,6 +235,8 @@ Output:
   <img alt="imagemfiltrada" src="./exercicio 5.2/output_filtro.png" width=200px height=200px>
 </p>
 
+O código total pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%205.2/laplgauss.cpp)
+
 ## Exercício 8.2
 - **Utilizando os programas [exemplos/canny.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/canny.cpp) e [exemplos/pontilhismo.cpp](https://agostinhobritojr.github.io/tutorial/pdi/exemplos/pontilhismo.cpp) como referência, implemente um programa cannypoints.cpp. A idéia é usar as bordas produzidas pelo algoritmo de Canny para melhorar a qualidade da imagem pontilhista gerada. A forma como a informação de borda será usada é livre. Entretanto, são apresentadas algumas sugestões de técnicas que poderiam ser utilizadas:**
 **Desenhar pontos grandes na imagem pontilhista básica;**
@@ -244,6 +255,7 @@ Foi feita a união do algorítmo do pontilhismo com o do canny. Foi adicionado m
   <img alt="imagemfiltrada" src="./exercicio 8.2/output.png">
 </p>
 
+O código total pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%208.2/cannypoints.cpp)
 
 ## Exercício 9.2
 - Utilizando o programa kmeans.cpp como exemplo prepare um programa exemplo onde a execução do código se dê usando o parâmetro nRodadas=1 e inciar os centros de forma aleatória usando o parâmetro KMEANS_RANDOM_CENTERS ao invés de KMEANS_PP_CENTERS. Realize 10 rodadas diferentes do algoritmo e compare as imagens produzidas. Explique porque elas podem diferir tanto.
@@ -266,3 +278,5 @@ Output:
   <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-9.jpg" width=200px height=200px>
   <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-10.jpg" width=200px height=200px>
 </p>
+
+O código total pode ser consultado neste [link](https://github.com/thiagoasb/praticas-pdi/blob/master/exercicio%209.2/k_means.cpp)
