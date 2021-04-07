@@ -238,11 +238,19 @@ Output:
 
     - **Descreva no seu relatório detalhes do procedimento usado para criar sua técnica pontilhista.**
 
+Foi feita a união do algorítmo do pontilhismo com o do canny. Foi adicionado mais três slider bar, representando o raio, o jitter e o step (propriedades que pertencem às técnicas do pontilhismo). 
+
+<p align="center">
+  <img alt="imagemfiltrada" src="./exercicio 8.2/output.png">
+</p>
+
 
 ## Exercício 9.2
 - Utilizando o programa kmeans.cpp como exemplo prepare um programa exemplo onde a execução do código se dê usando o parâmetro nRodadas=1 e inciar os centros de forma aleatória usando o parâmetro KMEANS_RANDOM_CENTERS ao invés de KMEANS_PP_CENTERS. Realize 10 rodadas diferentes do algoritmo e compare as imagens produzidas. Explique porque elas podem diferir tanto.
 
 Para fazer a comparação entre as imagens foi alterado no programa a variável *nRodadas* para 1 e o parâmetro *KMEANS_RANDOM_CENTERS* para *KMEANS_PP_CENTERS*, para iniciar os centros de forma aleatória, em seguido o algorítmo foi rodado 10 vezes.
+
+Ao observar as imagens pode-se observar pequenas mudanças entre as imagens, as diferenças entre elas se dão devido ao parâmetro pelo *KMEANS_RANDOM_CENTERS*.
 
 Output:
 <p align="center">
@@ -258,4 +266,3 @@ Output:
   <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-9.jpg" width=200px height=200px>
   <img alt="imagemcapturada" src="./exercicio 9.2/sushi-kmeans-10.jpg" width=200px height=200px>
 </p>
-
