@@ -262,7 +262,7 @@ O código total pode ser consultado neste [link](https://github.com/thiagoasb/pr
 
 Para fazer a comparação entre as imagens foi alterado no programa a variável *nRodadas* para 1 e o parâmetro *KMEANS_RANDOM_CENTERS* para *KMEANS_PP_CENTERS*, para iniciar os centros de forma aleatória, em seguido o algorítmo foi rodado 10 vezes.
 
-Ao observar as imagens pode-se observar pequenas mudanças entre as imagens, as diferenças entre elas se dão devido ao parâmetro pelo *KMEANS_RANDOM_CENTERS*.
+Ao observar as imagens pode-se observar pequenas mudanças entre as imagens, as diferenças entre elas se dão devido ao parâmetro pelo *KMEANS_RANDOM_CENTERS*, que geram os centros aleatoriamente, outro fator foi com o parâmetro nRodadas que faz com que o algorítmo seja repetido apenas uma vez.
 
 Output:
 <p align="center">
